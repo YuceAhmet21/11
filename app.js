@@ -429,3 +429,8 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+
+
+function startGame() {
+  alert("Oyun başlatılıyor...");
+}

@@ -1,67 +1,29 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-  <title>Yazboz • Tekli Motor</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yazboz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg"></div>
-  <div id="blur" class="blur"></div>
 
-  <main id="home" class="screen">
-    <div class="card">
-      <h1>Yazboz</h1>
-      <div class="sp"></div>
-      <button class="btn" id="btnStart">101 Okey (Tekli)</button>
-      <div class="sp"></div>
-      <div class="pill">Bu sürüm: Tekli motor ✅</div>
-    </div>
-  </main>
+  <div class="background"></div>
 
-  <main id="game" class="screen hidden" style="align-items:flex-start">
-    <div class="topbar">
-      <div class="left">
-        <span class="pill" id="titlePill">101 • Tekli</span>
-        <button class="btn btn-small" id="btnUndo">Geri Al</button>
-        <button class="btn btn-small" id="btnMenu">Menü</button>
-      </div>
-      <div class="right">
-        <button class="btn btn-small" id="btnNewHand">+ El</button>
-      </div>
-    </div>
+  <div class="center-card">
 
-    <div class="table-wrap">
-      <table id="tbl"></table>
-    </div>
+      <h1 class="title">Yazboz</h1>
 
-    <div class="sp"></div>
-    <div class="totals" id="totals"></div>
+      <!-- Mavi görsel artık gerçek buton -->
+      <button class="image-button" onclick="startGame()">
+        <img src="bg.png" alt="101 Okey">
+        <span class="btn-text">101 Okey (Tekli)</span>
+      </button>
 
-    <div class="note">
-      Hücreye tıkla = <b>TAŞ</b> yaz. <b>CEZA</b> +101 • <b>KAFA</b> −101 (toggle).<br/>
-      <b>SİLER/OKEY/ELDEN/ÇİFT</b> = el biter. Siler/Okey/Elden/Çift yapan kişi taş yazmaz (kilit 🔒).<br/>
-      El bitince diğer oyuncular taşlarını yazar, sonra otomatik yeni el başlar (1. oyuncudan).<br/>
-      Çift Siler: yapan −202, diğerlerinin TAŞ değeri ×2 (sadece taş; ceza/bonus çarpılmaz).<br/>
-      800: birine 800 → diğerleri 400 (toggle). 800 varken Siler grubu yok; Siler varken 800 yok.
-    </div>
-  </main>
+      <div class="version">Bu sürüm: Tekli motor ✅</div>
 
-  <div id="backdrop" class="sheet-backdrop"></div>
-  <div id="sheet" class="sheet">
-    <h3 id="sheetTitle">Taş yaz</h3>
-    <div class="field">
-      <input id="tasInput" type="number" inputmode="numeric" placeholder="0"/>
-    </div>
-    <div class="row">
-      <button class="btn btn-small" id="btnSaveTas">Kaydet</button>
-      <button class="btn btn-small" id="btnCancelTas">İptal</button>
-    </div>
-    <div class="sheet-note" id="sheetNote"></div>
   </div>
-
-  <div id="toast" class="toast"></div>
 
   <script src="app.js"></script>
 </body>
